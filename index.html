@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDIFON</title>
+    <link rel="stylesheet" href="styless.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div class="body">
+        <div class="head">
+            <div class="logo">HNGxZuri </div>
+
+            <div class="nav_bar">
+            <a href="index.html">Home</a>
+            <a href="#">Track</a>
+            <a href="#">About</a>
+                <button type="button" id="githead" ><a data-testid=“githubURL” href="https://github.com/N-TITIAN" >Github</a></button>
+            
+            </div>
+        </div>
+        
+        <div class="head_content"> 
+            <div class="head_infos"> 
+                
+                <div class="head_text">
+                    <div  class="slkname">
+                        <p class="name_cap"> Slackname</p>
+                        <p data-testid="slackUserName">NDIFON </p>
+                    </div>
+                <P>Welcome to the profile of Ndifon, a talented Frontend intern at HNG, the tech community where wizards are born and dreams come to life. </P>
+                <div id="gitbut">
+                    <button type="button" class="giturl" href="https://github.com/N-TITIAN"><a data-testid=“githubURL” href="https://github.com/N-TITIAN" >Github Url</a></button>
+                </div> 
+
+                </div>
+
+                <div id="under">
+                    <div class="day">
+                        <p data-testid="currentDayOfTheWeek"> </p>
+        
+                    </div>
+                    <div class="time">
+                        <P data-testid="currentUTCTime"></P>
+                     </div>
+                     
+                </div>
+            </div>
+            <div id="image_track"> 
+                <img src="ndifon.jpg" width="473px"  alt="Ndifon" data-testid="slackDisplayImage">
+                <div id="track_rec"> <p data-testid="myTrack" id="pa1"> FONT-END </p>
+                <P id="pa2">Track</P>
+            </div>
+            </div>
+        </div>
+
+
+        <div id="under">
+           
+        </div>
+        <div class="connect_slack">
+            <p> Lets go to slcak...</p>
+         </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript code to update dynamic data
+        var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var day = new Date().getDay();
+        var currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+        var currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+    
+        currentDayElement.textContent = 'Current Day: ' + daysOfWeek[day];
+        currentUTCTimeElement.textContent = 'Current UTC Time: ' + Date.now();
+      </script>
+</body>
+</html>
