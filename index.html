@@ -66,14 +66,24 @@
         </div>
     </div>
     <script>
-        // JavaScript code to update dynamic data
-        var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        var day = new Date().getDay();
-        var currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-        var currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
-    
-        currentDayElement.textContent = 'Current Day: ' + daysOfWeek[day];
-        currentUTCTimeElement.textContent = 'Current UTC Time: ' + Date.now();
-      </script>
+    // JavaScript code to update dynamic data
+    var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    var currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+
+    // Function to format the time in milliseconds
+    function formatTime(date) {
+      return date.getTime().toString();
+    }
+
+    // Update the current day and UTC time every second
+    setInterval(function() {
+      var currentDate = new Date();
+      var day = currentDate.getDay();
+
+      currentDayElement.textContent = 'Current Day: ' + daysOfWeek[day];
+      currentUTCTimeElement.textContent = 'Current UTC Time: ' + formatTime(currentDate);
+    }, 1);
+  </script>
 </body>
 </html>
